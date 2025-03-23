@@ -1,0 +1,15 @@
+{
+  "family": "spring-app",
+  "containerDefinitions": [
+    {
+      "name": "app",
+      "image": "your-app:latest",
+      "portMappings": [{ "containerPort": 8080 }],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "networkMode": "awsvpc"
+}
