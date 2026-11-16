@@ -1,14 +1,6 @@
-version: '3.8'
 services:
   app:
-    image: your-app:latest
+    build: .
+    image: spring-boot-containerization:local
     ports:
-      - "8080:8080"
-    depends_on:
-      - db
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: demo
+      - "127.0.0.1:8080:8080"
